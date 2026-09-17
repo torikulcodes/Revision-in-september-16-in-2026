@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	// taskOne()
-	// taskTwo()
+	taskOne()
+	taskTwo()
 	taskThree()
 }
 
