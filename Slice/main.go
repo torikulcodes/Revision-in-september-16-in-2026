@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	// addItems()
-	// slicing()
-	// copySlice()
+	addItems()
+	slicing()
+	copySlice()
 	lenCap()
 }
 
