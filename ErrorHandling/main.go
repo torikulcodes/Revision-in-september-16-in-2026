@@ -12,19 +12,25 @@ func main() {
 	// }
 	// fmt.Println(result)
 
-	age,err := getUserAge(-9)
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Println(age)
-	}
+	// age,err := getUserAge(-9)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// } else {
+	// 	fmt.Println(age)
+	// }
 
-	age2,err := getUserAge(5)
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		fmt.Println(age2)
-	}
+	// age2,err := getUserAge(5)
+	// if err != nil {
+	// 	fmt.Println(err)
+	// } else {
+	// 	fmt.Println(age2)
+	// }
+
+	fmt.Println(checkAge(-4))
+
+	fmt.Println(checkAge(4))
+
+
 }
 
 func divide(a, b int) (int, error) {
@@ -41,4 +47,13 @@ func getUserAge(age int) (string, error) {
 		return "Valid age", nil
 	}
 	return "nothing", nil
+}
+
+func checkAge(age int)error{
+	if age < 0 {
+		return fmt.Errorf("age must be grater then 0 your age is %d",age)
+	}else if age >= 0 {
+		return nil
+	}
+	return fmt.Errorf("Error")
 }
